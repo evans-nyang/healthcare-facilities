@@ -22,6 +22,8 @@ services:
       - ~/Documents/secrets/personal-gcp.json:/home/src/personal-gcp.json
       - ~/.aws:/home/src/.aws
     restart: on-failure:5
+    networks:
+      - healthNet
   postgres:
     image: postgres:15
     restart: on-failure
@@ -34,3 +36,10 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "${POSTGRES_PORT}:5432"
+    networks:
+      - healthNet
+
+networks:
+  healthNet:
+    name: healthNet
+    driver: bridge
