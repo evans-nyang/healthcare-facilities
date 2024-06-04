@@ -1,9 +1,23 @@
 # https://docs.getdbt.com/docs/core/connect-data-platform/profiles.yml
 
-base:
-  outputs:
+# base:
+#   outputs:
 
-    dev:
-      type: duckdb
+#     dev:
+#       type: duckdb
 
+#   target: dev
+
+  # example profiles.yml file
+health_base:
   target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: passwad
+      port: 5432
+      dbname: health_data
+      schema: dbt_health
+      threads: 4
