@@ -42,7 +42,7 @@ blocks:
     file_source:
       path: data_exporters/loader_recovery.py
   downstream_blocks:
-  - remarkable_hill
+  - remarkable_health
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -59,27 +59,28 @@ blocks:
   color: null
   configuration:
     dbt:
-      command: test
+      command: run
     dbt_profile_target: ''
     dbt_project_name: dbt/health_base
     disable_query_preprocessing: false
     export_write_policy: append
+    file_path: dbts/remarkable_health.yaml
     file_source:
-      path: dbts/remarkable_hill.yaml
+      path: dbts/remarkable_health.yaml
     use_raw_sql: false
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: yaml
-  name: remarkable hill
+  name: remarkable health
   retry_config: null
-  status: updated
+  status: failed
   timeout: null
   type: dbt
   upstream_blocks:
   - loader_recovery
-  uuid: remarkable_hill
+  uuid: remarkable_health
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

@@ -4,11 +4,11 @@ WITH stg_facilities AS (
 
 staged AS (
     SELECT
-        code,
-        _name,
-        facility_type,
-        _owner,
-        regulatory_body
+        md5(trim(name)) AS name_hash
+        lower(_name) AS facilityName,
+        lower(facility_type) AS facilityType,
+        lower(_owner) AS ownership,
+        lower(regulatory_body) AS regulatoryBody
     FROM stg_facilities
 )
 

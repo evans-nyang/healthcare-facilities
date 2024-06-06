@@ -1,10 +1,9 @@
-WITH stg_locations(
+WITH stg_locations AS (
     SELECT * FROM {{ source('health', 'health_care_facilities')}}
 ),
 
 staged AS (
     SELECT
-        code,
         county,
         constituency,
         sub_county,
