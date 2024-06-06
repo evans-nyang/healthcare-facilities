@@ -1,5 +1,5 @@
-WITH stg_operations (
-    SELECT * FROM {{ source('health', 'health_care_facilities')}}
+WITH stg_operations AS (
+    SELECT * FROM {{ source('health', 'health_care_facilities') }}
 ),
 
 staged AS (

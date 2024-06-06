@@ -2,7 +2,7 @@ sources:
 - description: Dataframes Mage upstream blocks
   loader: mage
   name: mage_health_base
-  schema: dbt_health
+  schema: public
   tables:
   - description: Dataframe for block `loader_recovery` of the `opaque_scroll` mage
       pipeline.

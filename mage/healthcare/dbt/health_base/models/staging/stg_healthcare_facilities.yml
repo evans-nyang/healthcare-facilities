@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_counties
+    description: >
+      A staging view containing one record per county.
+    columns:
+      - name: countyID
+        description: Primary key for the table
+        tests:
+          - unique
+          - not_null
+      - name: countyName
+        description: The name of the county
+        tests:
+          - not_null

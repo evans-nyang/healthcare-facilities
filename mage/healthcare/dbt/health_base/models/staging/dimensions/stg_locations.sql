@@ -4,6 +4,8 @@ WITH stg_locations AS (
 
 staged AS (
     SELECT
+        md5(code::text) as code_hash,
+        code,
         county,
         constituency,
         sub_county,

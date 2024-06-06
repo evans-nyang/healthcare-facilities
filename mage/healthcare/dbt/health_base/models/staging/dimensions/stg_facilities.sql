@@ -4,7 +4,7 @@ WITH stg_facilities AS (
 
 staged AS (
     SELECT
-        md5(trim(name)) AS name_hash
+        md5(trim(_name)) AS name_hash,
         lower(_name) AS facilityName,
         lower(facility_type) AS facilityType,
         lower(_owner) AS ownership,

@@ -1,5 +1,14 @@
--- Create a temporary table to store county mappings
-WITH county_mappings AS (
+WITH myhealthcare AS (
+    SELECT * FROM {{ source('health', 'health_care_facilities') }}
+),
+
+stg_counties AS (
+    SELECT DISTINCT
+        county
+    FROM myhealthcare
+),
+
+county_mappings AS (
     SELECT * FROM (VALUES
         ('MOMBASA', '01'),
         ('KWALE', '02'),
@@ -48,18 +57,24 @@ WITH county_mappings AS (
         ('KISII', '45'),
         ('NYAMIRA', '46'),
         ('NAIROBI', '47')
-    ) AS county_mappings(countyName, countyID)
+    ) AS county_mappings(county_name, county_id)
+),
+
+intermediate AS (
+    SELECT DISTINCT
+        md5(county_id::text) as county_hash,
+        county_mappings.county_id,
+        stg_counties.county AS county_name
+    FROM
+        stg_counties 
+    JOIN
+        county_mappings 
+    ON
+        stg_counties.county = county_mappings.county_name
+    ORDER BY
+        county_mappings.county_id ASC
 )
-SELECT DISTINCT
-    cm.countyID,
-    hcf.county AS countyName
-FROM
-    health_care_facilities hcf
-JOIN
-    county_mappings cm
-ON
-    hcf.county = cm.countyName
-WHERE
-    hcf.county IS NOT NULL
-ORDER BY
-    cm.countyID;
+
+SELECT * FROM intermediate
+
+

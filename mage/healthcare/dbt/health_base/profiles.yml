@@ -8,5 +8,5 @@ health_base:
       password: passwad
       port: 5432
       dbname: health_data
-      schema: dbt_health
+      schema: public
       threads: 4

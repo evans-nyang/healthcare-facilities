@@ -75,7 +75,7 @@ blocks:
   language: yaml
   name: remarkable health
   retry_config: null
-  status: failed
+  status: executed
   timeout: null
   type: dbt
   upstream_blocks:
