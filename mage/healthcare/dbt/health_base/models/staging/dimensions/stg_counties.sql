@@ -1,11 +1,11 @@
-WITH myhealthcare AS (
+WITH source AS (
     SELECT * FROM {{ source('health', 'health_care_facilities') }}
 ),
 
 stg_counties AS (
     SELECT DISTINCT
         county
-    FROM myhealthcare
+    FROM source
 ),
 
 county_mappings AS (

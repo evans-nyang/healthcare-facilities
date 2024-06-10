@@ -172,5 +172,10 @@ scratch*
 magic-zoomcamp
 *.json
 
-# Mage config files
+# Mage config file
 io_config.yaml
+mage_data
+metadata.yaml
+personal*
+*.aws
+package-lock.yml

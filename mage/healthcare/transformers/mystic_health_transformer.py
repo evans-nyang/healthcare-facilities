@@ -4,6 +4,7 @@ if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 import numpy as np
 import pandas as pd
+# from datetime import datetime
 
 @transformer
 def transform(data, *args, **kwargs):
@@ -21,6 +22,8 @@ def transform(data, *args, **kwargs):
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
     # transformation logic
+    # Add a new column 'crawled_at' with the current date and time
+    # data.insert(0, "crawled_at", datetime.now(), True)
     data['Registration_number'].fillna('Unknown', inplace=True)
     data['Keph level'] = data['Keph level'].str.replace('Level ', '')
     data['Keph level'].replace('None', np.nan, inplace=True)

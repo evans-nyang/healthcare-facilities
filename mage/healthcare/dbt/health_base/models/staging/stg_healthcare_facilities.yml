@@ -1,12 +1,21 @@
 version: 2
 
 models:
+  - name: stg_facilities
+    description: >
+      A staging view containing health facility records.
+    columns:
+      - name: facility_hash
+        description: Unique primary identifier for the view
+        tests:
+          - unique
+          - not_null
   - name: stg_counties
     description: >
       A staging view containing one record per county.
     columns:
-      - name: countyID
-        description: Primary key for the table
+      - name: county_hash
+        description: Unique primary identifier for the view
         tests:
           - unique
           - not_null

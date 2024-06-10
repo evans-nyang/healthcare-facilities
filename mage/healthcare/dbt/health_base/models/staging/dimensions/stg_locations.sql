@@ -1,8 +1,8 @@
-WITH stg_locations AS (
+WITH source AS (
     SELECT * FROM {{ source('health', 'health_care_facilities')}}
 ),
 
-staged AS (
+stg_locations AS (
     SELECT
         md5(code::text) as code_hash,
         code,
@@ -10,7 +10,7 @@ staged AS (
         constituency,
         sub_county,
         ward
-    FROM stg_locations
+    FROM source
 )
 
-SELECT * FROM staged
+SELECT * FROM stg_locations
