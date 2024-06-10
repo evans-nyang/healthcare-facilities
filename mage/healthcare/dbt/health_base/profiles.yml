@@ -3,10 +3,10 @@ health_base:
   outputs:
     dev:
       type: postgres
-      host: healthcare-postgres
-      user: postgres
-      password: passwad
+      host: "{{ env_var('POSTGRES_HOST') }}"
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
       port: 5432
-      dbname: health_data
+      dbname: "{{ env_var('POSTGRES_DBNAME') }}"
       schema: public
       threads: 4
