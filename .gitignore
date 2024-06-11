@@ -166,3 +166,6 @@ io_config.yaml
 mage_data
 personal*
 *.aws
+
+# My Files
+mynotebooks
