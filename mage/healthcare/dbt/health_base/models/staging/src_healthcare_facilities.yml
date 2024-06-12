@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: health
+    description: Healthcare facilities data from health_data database
+    database: health_data
+    schema: public
+    tables:
+      - name: health_care_facilities
+        description: >
+          One record per facility
+        columns:
+          - name: code
+            description: Primary key of the health_care_facilities table
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,107 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_loaders/health_data_extractor.py
+    file_source:
+      path: data_loaders/health_data_extractor.py
+  downstream_blocks:
+  - mystic_health_transformer
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: health_data_extractor
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: health_data_extractor
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - loader_recovery
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: mystic_health_transformer
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - health_data_extractor
+  uuid: mystic_health_transformer
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_exporters/loader_recovery.py
+    file_source:
+      path: data_exporters/loader_recovery.py
+  downstream_blocks:
+  - remarkable_health
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: loader_recovery
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - mystic_health_transformer
+  uuid: loader_recovery
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dbt:
+      command: run
+    dbt_profile_target: ''
+    dbt_project_name: dbt/health_base
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_path: dbts/remarkable_health.yaml
+    file_source:
+      path: dbts/remarkable_health.yaml
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: remarkable health
+  retry_config: null
+  status: executed
+  timeout: null
+  type: dbt
+  upstream_blocks:
+  - loader_recovery
+  uuid: remarkable_health
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-05-31 00:40:08.617681+00:00'
+data_integration: null
+description: healthcare standard pipeline
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: opaque scroll
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: opaque_scroll
+variables_dir: /home/src/mage_data/healthcare
+widgets: []

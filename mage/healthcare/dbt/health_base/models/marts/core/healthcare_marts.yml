@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_facilities
+    description: Dimension table containing distinct facilities
+    columns:
+      - name: facility_hash
+        tests:
+          - unique
+          - not_null
+          
+  - name: dim_locations
+    description: Dimension table containing distinct facility locations
+    columns:
+      - name: code_hash
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_healthcare
+    description: Fact table containing all the unique identifiers
+    columns:
+      - name: code_name_hash
+        tests:
+          - unique
+          - not_null
+      - name: code_hash
+        tests:
+          - relationships:
+              to: ref('dim_locations')
+              field: code_hash
+      - name: facility_hash
+        tests:
+          - relationships:
+              to: ref('dim_facilities')
+              field: facility_hash
+    #   - name: county_hash
+    #     tests:
+    #       - not_null
+    #   - name: constituency_hash
+    #     tests:
+    #       - not_null
+    #   - name: sub_county_hash
+    #     tests:
+    #       - not_null
+    #   - name: ward_hash
+    #     tests:
+    #       - not_null
