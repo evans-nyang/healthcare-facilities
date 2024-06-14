@@ -5,6 +5,8 @@ WITH top_10_percent_facilities AS (
         f.facility_type,
         f.ownership,
         f.beds,
+        f.open_whole_day,
+        f.open_late_night,
         f.open_weekends,
         f.open_public_holidays,
         l.county
@@ -39,6 +41,8 @@ SELECT
     ownership,
     beds,
     county,
+    open_whole_day,
+    open_late_night,
     open_weekends,
     open_public_holidays
 FROM 
