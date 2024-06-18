@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 WITH top_10_percent_facilities AS (
     SELECT 
         f.facility_hash,
