@@ -34,18 +34,37 @@ WITH top_10_percent_facilities AS (
             WHERE 
                 decile = 1
         )
+),
+
+stg_facility_xtics AS (
+    SELECT 
+        facility_name,
+        facility_type,
+        ownership,
+        beds,
+        county,
+        open_whole_day,
+        open_late_night,
+        open_weekends,
+        open_public_holidays
+    FROM 
+        top_10_percent_facilities
+    ORDER BY 
+        beds DESC
+),
+
+inter_proxy AS (
+    SELECT
+        stg_facility_xtics.*,
+        {{ dbt_utils.generate_surrogate_key(['facility_name', 'facility_type']) }} AS facility_name_hash
+    FROM stg_facility_xtics
+),
+
+final AS (
+    SELECT
+        inter_proxy.*,
+        ROW_NUMBER() OVER (PARTITION BY facility_name_hash) AS entry_order
+    FROM inter_proxy
 )
-SELECT 
-    facility_name,
-    facility_type,
-    ownership,
-    beds,
-    county,
-    open_whole_day,
-    open_late_night,
-    open_weekends,
-    open_public_holidays
-FROM 
-    top_10_percent_facilities
-ORDER BY 
-    beds DESC;
+
+SELECT * FROM final WHERE entry_order = 1
