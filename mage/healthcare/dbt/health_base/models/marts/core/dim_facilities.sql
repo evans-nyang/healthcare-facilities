@@ -16,11 +16,17 @@ dim_facilities AS (
         facility_type,
         ownership,
         regulatory_body,
+        keph_level,
+        beds,
+        cots,
         operation_status,
         open_whole_day,
         open_public_holidays,
         open_weekends,
-        open_late_night
+        open_late_night,
+        approved,
+        public_visibility,
+        closed
     FROM stg_facilities
     {{ check_incremental('facility_hash') }}
 )
