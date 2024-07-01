@@ -11,13 +11,13 @@ WITH top_10_percent_facilities AS (
         f.open_public_holidays,
         l.county
     FROM 
-        dim_facilities f
+        stg_facilities f
     INNER JOIN 
         fact_healthcare fh
     ON 
         f.facility_hash = fh.facility_hash
     INNER JOIN 
-        dim_locations l
+        stg_locations l
     ON 
         fh.code_hash = l.code_hash
     WHERE 
@@ -29,7 +29,7 @@ WITH top_10_percent_facilities AS (
                     beds,
                     NTILE(10) OVER (ORDER BY beds DESC) AS decile
                 FROM 
-                    dim_facilities
+                    stg_facilities
             ) AS bed_distribution
             WHERE 
                 decile = 1
