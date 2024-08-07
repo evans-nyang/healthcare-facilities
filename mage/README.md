@@ -5,12 +5,9 @@
 Mage is an open-source, hybrid framework for transforming and integrating data. ✨
 
 We'll use the Mage platform to author and share _healthcare_ data pipelines.
-If you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview).
+If you'd like to learn a bit more about Mage, check out the docs [here](https://docs.mage.ai/introduction/overview).
 
-[Get Started](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#lets-get-started)
-[Assistance](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#assistance)
-
-## Let's get started
+## Getting started
 
 This repo contains a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/).
 
@@ -20,15 +17,15 @@ You can start by cloning the repo:
 git clone https://github.com/evans-nyang/healthcare-facilities.git
 ```
 
-Navigate to the repo:
+Navigate to the directory:
 
 ```bash
 cd healthcare-facilities/mage
 ```
 
-Rename `.env_example_mage` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it _will_ contain credentials in the future.
+Rename `.env_example_mage` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it contains the credentials. Change the values in the `.env` file to match your environment.
 
-Now, let's build the container
+Now, build the container
 
 ```bash
 docker compose build
@@ -40,7 +37,7 @@ Finally, start the Docker container:
 docker compose up
 ```
 
-Now, navigate to <http://localhost:6789> in your browser! Voila! You're ready to get started.
+Now, navigate to <http://localhost:6789> in your browser! 🚀
 
 ### What just happened?
 
@@ -50,7 +47,6 @@ This repository should have the following structure:
 
 ```
 .
-├── .env
 ├── healthcare
 │   ├── __pycache__
 │   ├── charts
@@ -70,7 +66,7 @@ This repository should have the following structure:
 │   └── requirements.txt
 ├── Dockerfile
 ├── README.md
-├── dev.env
+├── .env
 ├── docker-compose.yml
 └── requirements.txt
 ```
