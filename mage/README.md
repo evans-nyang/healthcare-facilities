@@ -1,10 +1,19 @@
 # Healthcare Facilities
 
-## Mage AI
+## Context
+
+- [Introduction](#introduction)
+- [Getting started](#getting-started)
+- [Assistance](#assistance)
+
+## Introduction
+
+This project is a simple demonstration of how to use Mage to transform and integrate data. We'll be working with a dataset of healthcare facilities in Kenya. The dataset contains information about the facilities, such as the facility name, type, county, and location.
+
+The goal of this project is to transform the data into a format that can be easily consumed by other systems. We'll use the Mage platform to author and share _healthcare_ data pipelines: creation of a pipeline that reads the data, transforms it, and writes it to a new location.
 
 Mage is an open-source, hybrid framework for transforming and integrating data. ✨
 
-We'll use the Mage platform to author and share _healthcare_ data pipelines.
 If you'd like to learn a bit more about Mage, check out the docs [here](https://docs.mage.ai/introduction/overview).
 
 ## Getting started
