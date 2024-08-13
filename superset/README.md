@@ -20,14 +20,7 @@ cd healthcare-facilities/superset
 
 Rename `.env_example_superset` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it contains the credentials. Change the values in the `.env` file to match your environment.
 
-Now, build the container
-
-```bash
-
-docker compose build
-```
-
-Finally, start the Docker container:
+Now, start the Docker container services:
 
 ```bash
 docker compose -f docker-compose-superset.yml up

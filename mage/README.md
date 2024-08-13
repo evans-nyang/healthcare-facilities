@@ -16,6 +16,48 @@ Mage is an open-source, hybrid framework for transforming and integrating data. 
 
 If you'd like to learn a bit more about Mage, check out the docs [here](https://docs.mage.ai/introduction/overview).
 
+### Data Sources and ETL Process  
+
+The data sources for this project are the [Kenya Master Health Facility List](https://kmhfl.health.go.ke/#/home) and the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities). The ETL process is as follows:
+
+1. Download the Kenya Master Health Facility List from the [Kenya Master Health Facility List](https://kmhfl.health.go.ke/#/home) website.
+
+2. Download the Kenya Health Facilities GeoJSON from the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities) website.
+
+3. Extract the data from the Kenya Master Health Facility List and the Kenya Health Facilities GeoJSON.
+
+4. Transform the data from the Kenya Master Health Facility List and the Kenya Health Facilities GeoJSON.
+
+5. Load the data into the database.
+
+### Data Model
+
+The data model for this project is as follows:
+
+- `healthcare_facilities` table
+  - `code` (integer): Unique identifier for the healthcare facility.
+  - `name` (string): Name of the healthcare facility.
+  - `registration number` (string): Registration number of the healthcare facility.
+  - `keph level` (string): Level of the healthcare facility.
+  - `facility type` (string): Type of the healthcare facility.
+  - `owner` (string): Owner of the healthcare facility.
+  - `regulatory body` (string): Regulatory body of the healthcare facility.
+  - `bed` (integer): Bed capacity of the healthcare facility.
+  - `cots` (integer): Cots capacity of the healthcare facility.
+  - `county` (string): County where the healthcare facility is located.
+  - `constituency` (string): Constituency where the healthcare facility is located.
+  - `sub_county` (string): Sub-county where the healthcare facility is located.
+  - `ward` (string): Ward where the healthcare facility is located.
+  - `operation status` (string): Operation status of the healthcare facility.
+  - `open_whole_day` (string): Whether the healthcare facility is open the whole day.
+  - `open_public_holidays` (string): Whether the healthcare facility is open on public holidays.
+  - `open_weekends` (string): Whether the healthcare facility is open on weekends.
+  - `open_late_night` (string): Whether the healthcare facility is open late at night.
+  - `service names` (string): Names of the services offered by the healthcare facility.
+  - `approved` (string): Whether the healthcare facility is approved.
+  - `public_visible` (string): Whether the healthcare facility is publicly visible.
+  - `closed` (string): Whether the healthcare facility is closed.
+
 ## Getting started
 
 This repo contains a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/).
