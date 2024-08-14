@@ -1,10 +1,12 @@
 # Healthcare Facilities
 
-## Context
+## Contents
 
 - [Introduction](#introduction)
+  - [Data Sources and ETL Process](#data-sources-and-etl-process)
+  - [Data Summary](#data-summary)
 - [Getting started](#getting-started)
-- [Assistance](#assistance)
+- [Extras](#extras)
 
 ## Introduction
 
@@ -16,11 +18,14 @@ Mage is an open-source, hybrid framework for transforming and integrating data. 
 
 If you'd like to learn a bit more about Mage, check out the docs [here](https://docs.mage.ai/introduction/overview).
 
+Data modeling and transformation will be done using dbt, a command-line tool that enables data analysts and engineers to transform data in their warehouse more effectively. dbt does this by allowing analysts to write select statements, test the output, and deploy the results to their warehouse.
+
 ### Data Sources and ETL Process  
 
-The data sources for this project are the [Kenya Master Health Facility List](https://kmhfl.health.go.ke/#/home) and the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities). The ETL process is as follows:
+The data sources for this project are the [Kenya Master Health Facility List](https://kmhfr.health.go.ke/public/facilities) and the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities).
+The ETL process is as follows:
 
-1. Download the Kenya Master Health Facility List from the [Kenya Master Health Facility List](https://kmhfl.health.go.ke/#/home) website.
+1. Download the Kenya Master Health Facility List from the [Kenya Master Health Facility List](https://kmhfr.health.go.ke/public/facilities) website.
 
 2. Download the Kenya Health Facilities GeoJSON from the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities) website.
 
@@ -30,9 +35,9 @@ The data sources for this project are the [Kenya Master Health Facility List](ht
 
 5. Load the data into the database.
 
-### Data Model
+### Data Summary
 
-The data model for this project is as follows:
+The attributes of the healthcare facilities dataset are as follows:
 
 - `healthcare_facilities` table
   - `code` (integer): Unique identifier for the healthcare facility.
@@ -62,12 +67,6 @@ The data model for this project is as follows:
 
 This repo contains a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/).
 
-You can start by cloning the repo:
-
-```bash
-git clone https://github.com/evans-nyang/healthcare-facilities.git
-```
-
 Navigate to the directory:
 
 ```bash
@@ -90,40 +89,13 @@ docker compose up
 
 Now, navigate to <http://localhost:6789> in your browser! 🚀
 
-### What just happened?
+### Extras
 
 We just initialized a new mage repository. It will be present in your project under the name `mage`. If you changed the varable `PROJECT_NAME` in the `.env` file, it will be named whatever you set it to.
 
-This repository should have the following structure:
-
-```
-.
-├── healthcare
-│   ├── __pycache__
-│   ├── charts
-│   ├── custom
-│   ├── data_exporters
-│   ├── data_loaders
-│   ├── dbt
-│   ├── extensions
-│   ├── interactions
-│   ├── pipelines
-│   ├── scratchpads
-│   ├── transformers
-│   ├── utils
-│   ├── __init__.py
-│   ├── io_config.yaml
-│   ├── metadata.yaml
-│   └── requirements.txt
-├── Dockerfile
-├── README.md
-├── .env
-├── docker-compose.yml
-└── requirements.txt
-```
-
-## Assistance
+The resources in the links below might come in handy:
 
 1. [Mage Docs](https://docs.mage.ai/introduction/overview): a good place to understand Mage functionality or concepts.
 2. [Mage Slack](https://www.mage.ai/chat): a good place to ask questions or get help from the Mage team.
 3. [Mage GitHub](https://github.com/mage-ai/mage-ai): a good place to open issues or feature requests.
+4. [Dbt Docs](https://docs.getdbt.com/docs/introduction): a good place to understand dbt functionality or concepts.
