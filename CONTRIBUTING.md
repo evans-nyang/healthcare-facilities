@@ -1,6 +1,6 @@
 # Healthcare Facilities Contributions Guidelines
 
-Thank you for considering contributing to **wow**! We appreciate your efforts and contributions to make this project better.
+Thank you for considering contributing to **healthcare-facilities**! We appreciate your efforts and contributions to make this project better.
 
 Please take a moment to review this document in order to make the contribution process smooth and effective for everyone involved.
 
