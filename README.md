@@ -71,15 +71,17 @@ healthcare-facilities
 │   ├── docker-compose.yml
 │   └── README.md
 │
-├── superset
-│   ├── .env_superset_example
-│   ├── Dockerfile
-│   ├── docker-compose-superset.yml
-│   ├── superset_config.py
-│   ├── superset_init.sh
-│   └── README.md
+├── visualization
+│   └── superset
+│       ├── .env_superset_example
+│       ├── Dockerfile
+│       ├── docker-compose-superset.yml
+│       ├── superset_config.py
+│       ├── superset_init.sh
+│       ├── superset_init.sh
+│       └── README.md
 │
-├── llm
+├── llm_health
 │   ├── .env_example_llm
 │   ├── index_data.py
 │   ├── ground_truth_health_data.ipynb
