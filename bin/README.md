@@ -1,4 +1,4 @@
-# Healthcare Facilities Language Model
+# Healthcare Facilities
 
 ## Contents
 
