@@ -27,3 +27,9 @@ docker compose -f docker-compose-superset.yml up
 ```
 
 Now, navigate to <http://localhost:8088> in your browser!
+
+To stop the services, run:
+
+```bash
+docker compose -f docker-compose-superset.yml down -v
+```
