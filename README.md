@@ -5,9 +5,7 @@ Healthcare facilities data in Kenya
 ## Table of Contents
 
 - [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Project Structure](#project-structure)
+- [Project Structure](#project-structure)
 - [Documentation](#documentation)
 - [License](#license)
 - [Contributing](#contributing)
@@ -28,15 +26,7 @@ The project is divided into three main components:
 
 The project is intended to be a resource for researchers, policymakers, and other stakeholders interested in understanding the distribution and availability of healthcare facilities in Kenya. It provides a comprehensive dataset of healthcare facilities in the country and a set of tools for exploring and analyzing the data.
 
-## Getting Started
-
-### Prerequisites
-
-- Python (version >= 3.8)
-- Docker (version >= 20.10)
-- Docker Compose (version >= 1.29)
-
-### Project Structure
+## Project Structure
 
 The project structure is as follows:
 
