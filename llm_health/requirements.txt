@@ -1,3 +1,6 @@
 pandas
 openai
 hyperopt
+fastapi
+uvicorn
+uuid
