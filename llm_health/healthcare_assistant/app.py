@@ -12,8 +12,9 @@ class QuestionRequest(BaseModel):
 
 class AnswerResponse(BaseModel):
     conversation_id: str
-    result: dict
-
+    question: str
+    result: str
+    
 class FeedbackRequest(BaseModel):
     conversation_id: str
     feedback: int
@@ -29,15 +30,16 @@ async def ask_question(request: QuestionRequest):
 
     # Call the RAG function to generate the answer
     result = rag(question)
+    answer = result["answer"]
 
     # Generate a unique conversation ID (UUID)
     conversation_id = str(uuid.uuid4())
 
-    # Return the result and conversation ID
+    # Return the result, conversation ID, and question
     return AnswerResponse(
         conversation_id=conversation_id,
         question=question,
-        result=result
+        result=answer
     )
 
 

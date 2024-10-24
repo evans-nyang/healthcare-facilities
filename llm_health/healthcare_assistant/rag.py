@@ -86,4 +86,4 @@ def rag(query):
     search_results = search(query)
     prompt = build_prompt(query, search_results)
     response = llm(prompt)
-    return response
+    return {"answer": response}
