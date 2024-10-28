@@ -1,27 +1,16 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 import uuid
 
 from rag import rag
+import db
+from models import QuestionRequest, FeedbackRequest
+
 
 app = FastAPI()
 
-# Define Pydantic models for request and response payloads
-class QuestionRequest(BaseModel):
-    question: str
-
-class AnswerResponse(BaseModel):
-    conversation_id: str
-    question: str
-    result: str
-    
-class FeedbackRequest(BaseModel):
-    conversation_id: str
-    feedback: int
-
 
 # POST endpoint to ask a question
-@app.post("/ask", response_model=AnswerResponse)
+@app.post("/ask")
 async def ask_question(request: QuestionRequest):
     question = request.question
 
@@ -29,18 +18,23 @@ async def ask_question(request: QuestionRequest):
         raise HTTPException(status_code=400, detail="No question provided")
 
     # Call the RAG function to generate the answer
-    result = rag(question)
-    answer = result["answer"]
+    answer_data = rag(question)
 
     # Generate a unique conversation ID (UUID)
     conversation_id = str(uuid.uuid4())
 
-    # Return the result, conversation ID, and question
-    return AnswerResponse(
+    # Save the conversation to the database
+    db.save_conversation(
         conversation_id=conversation_id,
         question=question,
-        result=answer
+        answer_data=answer_data
     )
+
+    return {
+        "conversation_id": conversation_id,
+        "question": question,
+        "result": answer_data["answer"]
+    }
 
 
 # POST endpoint to handle user feedback
@@ -51,6 +45,12 @@ async def feedback(request: FeedbackRequest):
 
     if not conversation_id or feedback not in [-1, 1]:
         raise HTTPException(status_code=400, detail="Invalid input")
+    
+    # Save the feedback in the database
+    db.save_feedback(
+        conversation_id=conversation_id,
+        feedback=feedback,
+    )
 
     return {
         "message": "Feedback received",
