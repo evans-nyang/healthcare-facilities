@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - healthNet
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      DATA_PATH: "data/kenya_health_facilities_clean.csv"
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    depends_on:
+      - postgres
+    networks:
+      - healthNet
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      # - GF_AUTH_DISABLE_LOGIN_FORM=false
+      # - GF_AUTH_ANONYMOUS_ENABLED=false
+      # - GF_SECURITY_ALLOW_EMBEDDING=true
+      # - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      # - GF_USERS_ALLOW_SIGN_UP=false
+      # - GF_USERS_ALLOW_ORG_CREATE=false
+      # - GF_USERS_AUTO_ASSIGN_ORG=true
+      # - GF_USERS_AUTO_ASSIGN_ORG_ROLE=Viewer
+      # - GF_SECURITY_SECRET_KEY=${GRAFANA_SECRET_KEY:-your_secret_key_here}
+    depends_on:
+      - postgres
+    networks:
+      - healthNet
+
+networks:
+  healthNet:
+    name: healthNet
+    driver: bridge
+
+volumes:
+  postgres_data:
+  grafana_data:
