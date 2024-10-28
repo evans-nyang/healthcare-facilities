@@ -1,8 +1,11 @@
+import os
 import pandas as pd
 import minsearch
 
 
-def load_data(data_path='../data/kenya_health_facilities_clean.csv'):
+DATA_PATH = os.getenv("DATA_PATH", "data/kenya_health_facilities_clean.csv")
+
+def load_data(data_path=DATA_PATH):
     df = pd.read_csv(data_path)
 
     documents = df.to_dict(orient='records')
