@@ -5,3 +5,6 @@ fastapi
 uvicorn
 uuid
 requests
+psycopg2-binary
+python-dotenv
+scikit-learn
