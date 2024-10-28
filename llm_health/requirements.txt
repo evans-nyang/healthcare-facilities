@@ -4,3 +4,4 @@ hyperopt
 fastapi
 uvicorn
 uuid
+requests
