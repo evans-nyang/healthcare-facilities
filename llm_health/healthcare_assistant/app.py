@@ -52,6 +52,13 @@ async def feedback(request: FeedbackRequest):
     if not conversation_id or feedback not in [-1, 1]:
         raise HTTPException(status_code=400, detail="Invalid input")
 
-    print(f"Feedback received: Conversation ID = {conversation_id}, Feedback = {feedback}")
+    return {
+        "message": "Feedback received",
+        "conversation_id": conversation_id,
+        "feedback": feedback
+    }
 
-    return {"message": "Feedback received"}
+# Run the FastAPI app with Uvicorn server
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
