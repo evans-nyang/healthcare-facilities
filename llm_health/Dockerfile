@@ -5,9 +5,9 @@ WORKDIR /app
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt .
-RUN pip install -r requirements.txt
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the data and the app
 COPY data/kenya_health_facilities_clean.csv data/kenya_health_facilities_clean.csv
 
 COPY healthcare_assistant .
@@ -15,6 +15,3 @@ COPY healthcare_assistant .
 EXPOSE 8000
 
 ENTRYPOINT ["python", "app.py"]
-
-# Run the FastAPI application with uvicorn
-# CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
