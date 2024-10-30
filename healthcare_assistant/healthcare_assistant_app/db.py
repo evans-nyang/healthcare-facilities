@@ -11,7 +11,6 @@ tz = ZoneInfo("Europe/Berlin")
 def get_db_connection():
     return psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "postgres"),
-        # host=os.getenv("POSTGRES_LOCAL_HOST", "localhost"),
         database=os.getenv("POSTGRES_DB", "healthcare_assistant"),
         user=os.getenv("POSTGRES_USER", "llm_health"),
         password=os.getenv("POSTGRES_PASSWORD", "llm_health"),
