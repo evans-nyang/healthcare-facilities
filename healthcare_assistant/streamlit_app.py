@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 
 
-# Define the base URL for your FastAPI app
+# Base URL for the FastAPI server
 BASE_URL = "http://localhost:8000" 
 
 
