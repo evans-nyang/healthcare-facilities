@@ -1,12 +1,33 @@
 from fastapi import FastAPI, HTTPException
+from contextlib import asynccontextmanager
 import uuid
+import logging
 
 from rag import rag
-import db
+from db import init_db, save_conversation, save_feedback
 from models import QuestionRequest, FeedbackRequest
 
 
-app = FastAPI()
+# Initialize logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+# Define an async context manager for lifespan
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    try:
+        logger.info("Initializing database...")
+        init_db()
+        logger.info("Database initialized successfully")
+    except Exception as e:
+        logger.error(f"Error initializing database: {str(e)}")
+        raise HTTPException(status_code=500, detail="Database initialization failed")
+    
+    yield
+    
+
+app = FastAPI(lifespan=lifespan)
 
 
 # POST endpoint to ask a question
@@ -24,7 +45,7 @@ async def ask_question(request: QuestionRequest):
     conversation_id = str(uuid.uuid4())
 
     # Save the conversation to the database
-    db.save_conversation(
+    save_conversation(
         conversation_id=conversation_id,
         question=question,
         answer_data=answer_data
@@ -47,7 +68,7 @@ async def feedback(request: FeedbackRequest):
         raise HTTPException(status_code=400, detail="Invalid input")
     
     # Save the feedback in the database
-    db.save_feedback(
+    save_feedback(
         conversation_id=conversation_id,
         feedback=feedback,
     )
@@ -57,6 +78,7 @@ async def feedback(request: FeedbackRequest):
         "conversation_id": conversation_id,
         "feedback": feedback
     }
+
 
 # Run the FastAPI app with Uvicorn server
 if __name__ == "__main__":

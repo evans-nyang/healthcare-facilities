@@ -129,7 +129,7 @@ def evaluate_relevance(question, answer):
 def calculate_cost(model, tokens):
     openai_cost = 0
 
-    if model == "gpt-4o":
+    if model == "gpt-4o" or model == "gpt-4o-mini":
         openai_cost = (tokens["total_tokens"] * 0.00250 + tokens["completion_tokens"] * 0.01) / 1000
     else:
         print("Invalid model specified. No cost calculated.")
