@@ -264,7 +264,7 @@ The improved approach - using minsearch with boosting - gave the following metri
 
 The RAG flow evaluation was implemented using the LLM-as-a-Judge metric.
 
-Among the ground truth records, there were 10 records that were relevant to the query. The RAG flow returned 8 relevant records and 2 irrelevant records.
+Among the ground truth records, there were 79 records that were relevant to the query, 11 records that were non-relevant, and 9 records that were partly relevant.
 
 For gpt-4o, in a sample of 100 queries, the code cell and results were as follows:
 
