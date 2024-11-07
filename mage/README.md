@@ -22,18 +22,17 @@ Data modeling and transformation will be done using dbt, a command-line tool tha
 
 ### Data Sources and ETL Process  
 
-The data sources for this project are the [Kenya Master Health Facility List](https://kmhfr.health.go.ke/public/facilities) and the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities).
+The data sources for this project are the [Kenya Master Health Facility List](https://kmhfr.health.go.ke/public/facilities).
+
 The ETL process is as follows:
 
 1. Download the Kenya Master Health Facility List from the [Kenya Master Health Facility List](https://kmhfr.health.go.ke/public/facilities) website.
 
-2. Download the Kenya Health Facilities GeoJSON from the [Kenya Health Facilities GeoJSON](https://data.humdata.org/dataset/kenya-health-facilities) website.
+2. Extract the data from the Kenya Master Health Facility List api.
 
-3. Extract the data from the Kenya Master Health Facility List and the Kenya Health Facilities GeoJSON.
+3. Transform the data by extracting the relevant columns and cleaning the data.
 
-4. Transform the data from the Kenya Master Health Facility List and the Kenya Health Facilities GeoJSON.
-
-5. Load the data into the database.
+4. Load the data into postgres database.
 
 ### Data Summary
 
