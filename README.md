@@ -108,8 +108,7 @@ healthcare-facilities
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── README.md
-└── requirements.txt
+└── README.md
 ```
 
 ## Documentation
