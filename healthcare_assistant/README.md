@@ -1,6 +1,6 @@
 # Healthcare Facility Assistant
 
-[![Healthcare Assistant Demo]()](../media/healthcare_assistant_demo.mp4)
+![Healthcare Assistant Demo](../media/healthcare_assistant_demo.gif)
 
 ## Data Description
 
