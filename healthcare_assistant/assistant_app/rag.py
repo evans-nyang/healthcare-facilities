@@ -9,7 +9,7 @@ import ingest
 # Load environment variables from the .env file
 load_dotenv()
 
-openai_token = os.environ["OPENAI_API_KEY"]
+# openai_token = os.environ["OPENAI_API_KEY"]
 token = os.environ["GITHUB_TOKEN"]
 endpoint = "https://models.inference.ai.azure.com"
 model_name = "gpt-4o-mini"

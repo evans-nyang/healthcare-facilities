@@ -1,8 +1,11 @@
+import logging
+import os
+import uuid
+from contextlib import asynccontextmanager
+
+import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from contextlib import asynccontextmanager
-import uuid
-import logging
 
 from rag import rag
 from db import init_db, save_conversation, save_feedback
@@ -34,7 +37,11 @@ app = FastAPI(lifespan=lifespan)
 # Add CORS middleware to allow requests from your frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3001"],  # Allow requests from your React app
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://localhost:3001",
+        "https://chat-interface-orpin.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -93,5 +100,10 @@ async def feedback(request: FeedbackRequest):
 
 # Run the FastAPI app with Uvicorn server
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(
+        "app:app",
+        host="0.0.0.0",
+        port=port,
+        reload=False  # Set to False in production
+    )
