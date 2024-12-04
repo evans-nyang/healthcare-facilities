@@ -1,6 +1,9 @@
 # GITHUB TOKEN
 GITHUB_TOKEN=YOUR_GITHUB_PERSONAL_ACCESS_TOKEN
 
+# OPENAI API KEY
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+
 # Postgres Configurations
 POSTGRES_USER=postgres_user
 POSTGRES_PASSWORD=postgres_password
@@ -8,10 +11,12 @@ POSTGRES_DB=healthcare_assistant
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
 POSTGRES_LOCAL_HOST=localhost
+DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:5432/${POSTGRES_DB}
 
 # App Configurations
 APP_PORT=8000
 DATA_PATH=data/kenya_health_facilities_clean.csv
+ALLOWED_ORIGINS=https://myapp.vercel.app,https://www.customdomain.com,http://localhost:3000,http://localhost:3001
 
 # Grafana Configurations
 GRAFANA_PORT=3000
