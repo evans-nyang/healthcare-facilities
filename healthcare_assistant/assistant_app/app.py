@@ -33,15 +33,16 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+# Get origins from environment variables
+ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:3000"
+).split(",")
 
 # Add CORS middleware to allow requests from your frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000", 
-        "http://localhost:3001",
-        "https://chat-interface-orpin.vercel.app"
-    ],
+    allow_origins=ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
