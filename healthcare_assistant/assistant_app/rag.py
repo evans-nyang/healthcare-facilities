@@ -9,9 +9,14 @@ import ingest
 # Load environment variables from the .env file
 load_dotenv()
 
+# openai_token = os.environ["OPENAI_API_KEY"]
+token = os.environ["GITHUB_TOKEN"]
+endpoint = "https://models.inference.ai.azure.com"
+model_name = "gpt-4o-mini"
+
 client = OpenAI(
-    base_url="https://models.inference.ai.azure.com",
-    api_key=os.environ["GITHUB_TOKEN"]
+    base_url=endpoint,
+    api_key=token
 )
 
 
@@ -75,7 +80,7 @@ def build_prompt(query, search_results):
     return prompt 
 
 
-def llm(prompt, model='gpt-4o'):
+def llm(prompt, model=model_name):
     response = client.chat.completions.create(
         model = model,
         messages = [{"role": "user", "content": prompt}]
@@ -113,7 +118,7 @@ and provide your evaluation in parsable JSON without using code blocks:
 
 def evaluate_relevance(question, answer):
     prompt = evaluation_prompt_template.format(question=question, answer=answer)
-    evaluation, tokens = llm(prompt, model='gpt-4o')
+    evaluation, tokens = llm(prompt, model=model_name)
 
     try:
         eval_data = json.loads(evaluation)
@@ -137,7 +142,7 @@ def calculate_cost(model, tokens):
     return openai_cost
 
 
-def rag(query, model='gpt-4o'):
+def rag(query, model=model_name):
     t0 = time()
     search_results = search(query)
     prompt = build_prompt(query, search_results)

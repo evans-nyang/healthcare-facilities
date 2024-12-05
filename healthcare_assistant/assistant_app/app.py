@@ -1,7 +1,11 @@
-from fastapi import FastAPI, HTTPException
-from contextlib import asynccontextmanager
-import uuid
 import logging
+import os
+import uuid
+from contextlib import asynccontextmanager
+
+import uvicorn
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 from rag import rag
 from db import init_db, save_conversation, save_feedback
@@ -28,6 +32,21 @@ async def lifespan(app: FastAPI):
     
 
 app = FastAPI(lifespan=lifespan)
+
+# Get origins from environment variables
+ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:3000"
+).split(",")
+
+# Add CORS middleware to allow requests from your frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # POST endpoint to ask a question
@@ -82,5 +101,10 @@ async def feedback(request: FeedbackRequest):
 
 # Run the FastAPI app with Uvicorn server
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(
+        "app:app",
+        host="0.0.0.0",
+        port=port,
+        reload=False  # Set to False in production
+    )

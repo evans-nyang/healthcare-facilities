@@ -9,6 +9,16 @@ tz = ZoneInfo("Europe/Berlin")
 
 
 def get_db_connection():
+    # Check if we're running on Heroku (DATABASE_URL will be set)
+    database_url = os.getenv("DATABASE_URL")
+    if database_url:
+        # Heroku's DATABASE_URL needs to be modified for psycopg2
+        # as it starts with 'postgres://' but psycopg2 expects 'postgresql://'
+        if database_url.startswith("postgres://"):
+            database_url = database_url.replace("postgres://", "postgresql://", 1)
+        return psycopg2.connect(database_url)
+    
+    # Fallback to local Docker configuration
     return psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "postgres"),
         database=os.getenv("POSTGRES_DB", "healthcare_assistant"),

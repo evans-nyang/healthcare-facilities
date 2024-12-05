@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the data and the app
 COPY data/kenya_health_facilities_clean.csv data/kenya_health_facilities_clean.csv
 
-COPY healthcare_assistant_app .
+COPY assistant_app .
 
 EXPOSE 8000
 
