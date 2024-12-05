@@ -36,6 +36,14 @@ healthcare-facilities
 │   └── README.md
 │
 ├── healthcare_assistant
+│   ├── assistant_app
+│   │   ├── app.py
+│   │   ├── db_prep.py
+│   │   ├── db.py
+│   │   ├── ingest.py
+│   │   ├── minsearch.py
+│   │   ├── models.py
+│   │   └── rag.py
 │   ├── data
 │   │   ├── ground_truth_retrieval.csv
 │   │   ├── kenya_health_facilities_clean.csv
@@ -44,15 +52,6 @@ healthcare-facilities
 │   │   ├── dashboard.json
 │   │   ├── grafana_queries.md
 │   │   └── init.py
-│   ├── healthcare_assistant_app
-│   │   ├── app.py
-│   │   ├── db_prep.py
-│   │   ├── db.py
-│   │   ├── ingest.py
-│   │   ├── minsearch.py
-│   │   ├── models.py
-│   │   ├── rag.py
-│   │   └── streamlit_app.py
 │   ├── notebooks
 │   │   ├── evaluation_data_generation.ipynb
 │   │   └── health_rag_flow.ipynb
@@ -61,6 +60,7 @@ healthcare-facilities
 │   ├── docker-compose.yml
 │   ├── Dockerfile
 │   ├── env_example_llm
+│   ├── heroku.yml
 │   ├── README.md
 │   ├── requirements.txt
 │   └── test.py
@@ -93,6 +93,8 @@ healthcare-facilities
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── README.md
+│
+├── media
 │
 ├── visualization
 │   └── superset
