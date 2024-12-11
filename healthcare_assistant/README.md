@@ -44,7 +44,7 @@ The Healthcare Facility Assistant is built using the following technologies:
 
 - [Minsearch](https://github.com/alexeygrigorev/minsearch): Minsearch is a minimal search engine that provides basic search functionality for text data.
 
-- OpenAI as LLM: OpenAI's Language Model (LLM) is a powerful natural language processing model that can generate human-like text.
+- OpenAI: OpenAI's Language Model (LLM) is a powerful natural language processing model that can generate human-like text.
 
 - FastAPI: A modern web framework for building APIs with Python. It is fast, easy to use, and provides interactive documentation for APIs.
 
