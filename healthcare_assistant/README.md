@@ -50,6 +50,8 @@ The Healthcare Facility Assistant is built using the following technologies:
 
 - Streamlit: An open-source app framework that allows developers to create interactive web applications with simple Python scripts.
 
+- React: A JavaScript library for building user interfaces. It is used to create the front end of the application.
+
 ## Run it
 
 Navigate to the `healthcare_assistant` directory from the root directory:
