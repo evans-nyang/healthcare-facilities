@@ -44,11 +44,13 @@ The Healthcare Facility Assistant is built using the following technologies:
 
 - [Minsearch](https://github.com/alexeygrigorev/minsearch): Minsearch is a minimal search engine that provides basic search functionality for text data.
 
-- OpenAI as LLM: OpenAI's Language Model (LLM) is a powerful natural language processing model that can generate human-like text.
+- OpenAI: OpenAI's Language Model (LLM) is a powerful natural language processing model that can generate human-like text.
 
 - FastAPI: A modern web framework for building APIs with Python. It is fast, easy to use, and provides interactive documentation for APIs.
 
 - Streamlit: An open-source app framework that allows developers to create interactive web applications with simple Python scripts.
+
+- React: A JavaScript library for building user interfaces. It is used to create the front end of the application.
 
 ## Run it
 
@@ -181,12 +183,12 @@ cd tests
 python test.py
 ```
 
-#### Web Interface
+#### Localhost User Interface
 
 You can also interact with the application using the web interface. However, you need to spin up the backend server first before running the frontend.
 You can follow the steps in the [Running the application with docker compose](#running-the-application-with-docker-compose) section to run the backend.
 
-To run the streamlit app locally, navigate to the `healthcare_assistant` directory and run the following command:
+To run the streamlit app locally, navigate to the `healthcare_assistant/assistant_app` directory and run the following command:
 
 ```bash
 streamlit run streamlit_app.py
@@ -198,7 +200,13 @@ Navigate to `http://localhost:8501` in your browser to access the application.
 
 ![Streamlit app](../media/app2.png)
 
-Check out [app.py](streamlit_app.py) file for the Streamlit application code.
+Check out [streamlit_app.py](assistant_app/streamlit_app.py) file for the Streamlit application code.
+
+### Web Interface Deployment
+
+To deploy the user interface, you can use Vercel. Check out the [Frontend Deployment Using Vercel Guide](frontend_deployment.md) for detailed instructions on how to deploy the frontend using Vercel.
+
+To deploy the backend, you can use Heroku. Check out the [Backend Deployment Using Heroku Guide](backend_deployment.md) for detailed instructions on how to deploy the backend using Heroku.
 
 ## API
 
