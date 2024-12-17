@@ -9,6 +9,12 @@ The front end User Interface was built using React. We're going to deploy our fr
 
 ## Deploying the Healthcare Assistant application
 
+Before starting the deployment make sure to run build command in the frontend project. This will create a build folder in the project directory.
+
+```bash
+npm run build
+```
+
 Install the Vercel CLI globally by running the following command in your terminal:
 
 ```bash
@@ -18,14 +24,31 @@ sudo npm install -g vercel
 Navigate to the root directory of the frontend project and run the following command:
 
 ```bash
-cd chat-interface
 vercel
+```
+
+To deploy a project in development mode, run the following command:
+
+```bash
+vercel dev
 ```
 
 To deploy the project in production mode, run the following command:
 
 ```bash
 vercel --prod
+```
+
+Deploy with Environment Variables
+
+```bash
+vercel -e NODE_ENV=production
+```
+
+List all deployments for the currently linked project
+
+```bash
+vercel list
 ```
 
 ## Issues
@@ -36,6 +59,8 @@ You might run into issues while deploying the project. Here are some common issu
 
 ```bash
 npm install axios
+npm install @material-ui/core
+npm install @material-ui/icons
 ```
 
 ## Extras
