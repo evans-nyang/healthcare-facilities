@@ -80,7 +80,7 @@ def main():
 
     df_results = pd.DataFrame(final_results, columns=['id', 'question'])
     existing_results = pd.concat([existing_results, df_results], ignore_index=True)
-    existing_results.to_csv('./ground_truth_data.csv', index=False)
+    existing_results.to_csv('../data/ground_truth_data.csv', index=False)
 
 if __name__ == "__main__":
     main()
