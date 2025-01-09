@@ -122,3 +122,63 @@ heroku container:rm web -a healthcare-assistant-app
 heroku apps
 heroku apps:destroy healthcare-assistant-app
 ```
+
+## Extras
+
+Follow these steps to set up ssh keys to access heroku apps via the command line:
+
+1. First, check if you already have an SSH key.
+
+```bash
+ls -al ~/.ssh
+```
+
+2. Generate a new SSH key with a custom name (let's call it id_ed25519_heroku). Remember to replace "your.email@example.com" with your actual email address when generating the key!
+
+```bash
+ssh-keygen -t ed25519 -C "your.email@example.com" -f ~/.ssh/id_ed25519_heroku
+```
+
+3. After generating, start the SSH agent.
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+4. Add your new key to the SSH agent.
+
+```bash
+ssh-add ~/.ssh/id_ed25519_heroku
+```
+
+5. View your new public key.
+
+```bash
+cat ~/.ssh/id_ed25519_heroku.pub
+```
+
+6. Add it to Heroku.
+
+```bash
+heroku keys:add ~/.ssh/id_ed25519_heroku.pub
+```
+
+7. Verify your keys are now listed in your SSH directory.
+
+```bash
+ls -al ~/.ssh
+```
+
+8. Check that Heroku recognizes the connection.
+
+```bash
+ssh -v git@heroku.com
+```
+
+9. View associated keys.
+
+```bash
+heroku keys
+```
+
+To learn more about ssh keys and heroku, check out the guide in this link 👉 [Heroku SSH keys](https://devcenter.heroku.com/articles/keys)
