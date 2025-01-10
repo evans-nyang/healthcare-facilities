@@ -1,6 +1,6 @@
 # Healthcare Facility Assistant
 
-![Healthcare Assistant Demo](../media/healthcareAssistantDemo.gif)
+![Healthcare Assistant Demo](../media/healthcare-facilities.gif)
 
 ## Data Description
 
@@ -235,6 +235,20 @@ The evaluation data was generated using a retrieval model to generate responses 
 The evaluation data was then used to calculate the hit rate and MRR metrics for the application.
 
 Check out the evaluation data generation code [evaluation_data_generation.ipynb](notebooks/evaluation_data_generation.ipynb). You can also see this notebook code for the evaluation [health_rag_flow.ipynb](notebooks/health_rag_flow.ipynb)
+
+There's also a python file [evaluation_data_generator](assistant_app/evaluation_data_generator.py) that generates the ground truth data for evaluation.
+
+You can set up a cron job to run the script at a specific time to generate the ground truth data.
+
+```bash
+crontab -e
+```
+
+Add the following line to the crontab file to run the script every day at 12:00 AM:
+
+```bash
+0 0 * * * /usr/bin/python3 /path/to/healthcare-facilities/healthcare_assistant/assistant_app/evaluation_data_generator.py
+```
 
 ### Retrieval
 
