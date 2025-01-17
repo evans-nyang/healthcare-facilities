@@ -2,29 +2,13 @@
 
 ![Healthcare Assistant Demo](../media/healthcare-facilities.gif)
 
+Try it out [here!](https://healthcare-facilities.live/)
+
 ## Data Description
 
-The data used in this project is sourced from the Kenya Master Health Facility List (KMHFL). The KMHFL is a comprehensive database of all health facilities in Kenya. The data is available in a CSV format and will be used to create the tool.
+The data used in this project is sourced from the Kenya Master Health Facility Registry (KMHFR). The KMHFR is a comprehensive database of all health facilities in Kenya. The data is available in a CSV format and will be used to create the tool.
 
-The dataset contains the following columns:
-
-- *Facility Code:* A unique identifier code assigned to the facility.
-- *Facility Name:* The name of the healthcare facility.
-- *Keph Level:* The keph level of the facility (e.g. Level 4, Level 5).
-- *Facility Type:* The type of healthcare facility (e.g. hospital, clinic, dispensary).
-- *Facility Owner:* The owner of the facility (e.g. government, private).
-- *County:* The county where the facility is located.
-- *Sub-County:* The sub-county where the facility is located.
-- *Constituency:* The constituency where the facility is located.
-- *Ward:* The ward where the facility is located.
-- *Operation Status:* The status of the facility (e.g. operational, closed).
-- *Open_whole_day:* Whether the facility is open whole day.
-- *Open_public_holidays:* Whether the facility is operational during public holidays.
-- *Open_weekends:* Whether the facility operates during weekends.
-- *Open_late_night:* Whether the facility is operational at night.
-- *Approved:* Approval status of the healthcare facility.
-- *Public visible:* Visibility status of the healthcare facility.
-- *Closed:* Operational status of the facility i.e closed or not closed.
+To view the data attributes, check out the data summary in this [documentation](../mage/README.md).
 
 ## Project Overview
 
@@ -42,15 +26,21 @@ The Healthcare Facility Assistant is designed to be user-friendly and intuitive,
 
 The Healthcare Facility Assistant is built using the following technologies:
 
-- [Minsearch](https://github.com/alexeygrigorev/minsearch): Minsearch is a minimal search engine that provides basic search functionality for text data.
+- [Minsearch](https://github.com/alexeygrigorev/minsearch): Minimal search engine that provides basic search functionality for text data.
 
 - OpenAI: OpenAI's Language Model (LLM) is a powerful natural language processing model that can generate human-like text.
 
 - FastAPI: A modern web framework for building APIs with Python. It is fast, easy to use, and provides interactive documentation for APIs.
 
-- Streamlit: An open-source app framework that allows developers to create interactive web applications with simple Python scripts.
+- PostgreSQL: Powerful open-source relational database management system that is used to store and manage the application's data.
 
-- React: A JavaScript library for building user interfaces. It is used to create the front end of the application.
+- Grafana: Analytics and monitoring platform that provides insights into the application's performance.
+
+- Streamlit: Framework that allows developers to create interactive web applications with simple Python scripts.
+
+- React: JavaScript library for building user interfaces. Used to create the front end of the web application.
+
+- Docker: A platform for developing, shipping, and running applications in containers.
 
 ## Run it
 
@@ -231,8 +221,7 @@ The evaluation of the Healthcare Assistant application was done using the follow
 - Hit Rate: The proportion of queries for which the application returned a relevant response.
 - Mean Reciprocal Rank (MRR): The average of the reciprocal ranks of the first relevant response for each query.
 
-The evaluation data was generated using a retrieval model to generate responses and evaluating the relevance of the responses using a set of ground truth records.
-The evaluation data was then used to calculate the hit rate and MRR metrics for the application.
+The evaluation data was generated using a retrieval model to generate responses. This data was then used to evaluate the relevance of the model responses through calculation of the hit rate and Mean Reciprocal Rank metrics.
 
 Check out the evaluation data generation code [evaluation_data_generation.ipynb](notebooks/evaluation_data_generation.ipynb). You can also see this notebook code for the evaluation [health_rag_flow.ipynb](notebooks/health_rag_flow.ipynb)
 
@@ -296,7 +285,7 @@ Click [here](grafana/grafana_queries.md) to see the queries used in the dashboar
 
 ## References
 
-- [Kenya Master Health Facility List (KMHFL)](https://kmhfl.health.go.ke/)
+- [Kenya Master Health Facility List (KMHFR)](https://KMHFR.health.go.ke/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
 - [OpenAI API Documentation](https://beta.openai.com/docs/)
