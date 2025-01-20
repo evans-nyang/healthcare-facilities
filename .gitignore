@@ -169,3 +169,11 @@ personal*
 
 # My Files
 mynotebooks
+chat-interface
+
+# Terraform files
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+terraform.tfvars
