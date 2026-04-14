@@ -1,0 +1,246 @@
+id,question
+2,What type of healthcare services are offered at Fairview Medical Centre?
+2,Is Fairview Medical Centre open on public holidays?
+2,How many beds does Fairview Medical Centre have for patients?
+2,Who regulates the operations of Fairview Medical Centre?
+2,Is Fairview Medical Centre located in Kayole South ward?
+3,What is the name of this healthcare facility?
+3,How many beds does the facility have available?
+3,Is the hospital operational on weekends and public holidays?
+3,Which county and ward is the facility located in?
+3,Who owns and regulates this healthcare facility?
+5,What type of healthcare services does Vital Solutions Health Centre provide?
+5,Is Vital Solutions Health Centre open on public holidays?
+5,How many beds are available at Vital Solutions Health Centre?
+5,Who owns Vital Solutions Health Centre?
+5,What is the regulatory body overseeing Vital Solutions Health Centre?
+7,What is the keph level of Ankara Medical Centre?
+7,Does Ankara Medical Centre operate on public holidays?
+7,How many beds are available at Ankara Medical Centre?
+7,Who regulates Ankara Medical Centre?
+7,Is Ankara Medical Centre open late at night?
+9,What services does Nazareth Medical Services-Githurai provide for outpatients?
+9,Is Nazareth Medical Services-Githurai open on public holidays?
+9,Does Nazareth Medical Services-Githurai operate late at night?
+9,"Who owns Nazareth Medical Services-Githurai, and is it a private or public facility?"
+9,Are there any beds or cots available at Nazareth Medical Services-Githurai?
+10,What level of healthcare services does Penda Medical Care-Kahawa West provide?
+10,Is Penda Medical Care-Kahawa West open on public holidays?
+10,Does Penda Medical Care-Kahawa West operate late at night?
+10,How many beds and cots are available at Penda Medical Care-Kahawa West?
+10,Who owns and regulates Penda Medical Care-Kahawa West?
+15,What level of healthcare facility is Itoleka Smartext Medical Services?
+15,Does this facility operate on public holidays?
+15,Who owns Itoleka Smartext Medical Services?
+15,Is the facility open for services late at night?
+15,In which ward is this medical facility located?
+16,What type of healthcare facility is Africare Limited Embakasi Clinic?
+16,Is Africare Limited Embakasi Clinic open on public holidays?
+16,How many beds and cots are available at Africare Limited Embakasi Clinic?
+16,Which regulatory body oversees Africare Limited Embakasi Clinic?
+16,Is Africare Limited Embakasi Clinic located in the Imara Daima ward?
+17,What is the facility's full name and ownership type?
+17,How many beds and cots are available at the facility?
+17,Is the facility open on public holidays and weekends?
+17,Which ward and constituency is the facility located in?
+17,Is the facility operational and approved for public use?
+19,What services are provided at Musuani Mdc given it is an outpatient-only facility?
+19,Is Musuani Mdc open during public holidays for healthcare services?
+19,"Who oversees the regulation of Musuani Mdc, and under what practice category does it operate?"
+19,How many beds or cots are available for patients at Musuani Mdc?
+19,What are the operating hours of Musuani Mdc since it is not open all day?
+23,What level of healthcare services does Kericho Medical Clinic provide?
+23,Is Kericho Medical Clinic open on weekends for outpatient services?
+23,"Who owns Kericho Medical Clinic, and under which regulatory body does it operate?"
+23,Does Kericho Medical Clinic have facilities like beds or cots for patients?
+23,Is Kericho Medical Clinic operational and approved for public access?
+24,What type of healthcare facility is Orion Healthcare Medical Centre?
+24,Is Orion Healthcare Medical Centre open on public holidays?
+24,How many beds and cots are available at Orion Healthcare Medical Centre?
+24,Which county and ward is Orion Healthcare Medical Centre located in?
+24,Is Orion Healthcare Medical Centre privately owned or publicly owned?
+25,What level of facility is COMMUNITY HEALTH SERVICE classified as?
+25,Does COMMUNITY HEALTH SERVICE operate on public holidays?
+25,Who is the owner of COMMUNITY HEALTH SERVICE?
+25,Is COMMUNITY HEALTH SERVICE open for late-night services?
+25,Which ward is COMMUNITY HEALTH SERVICE located in?
+26,What is the name of this healthcare facility?
+26,Is this facility open on public holidays?
+26,Which ward is this facility located in?
+26,What type of services does this facility offer?
+26,Who regulates this healthcare facility?
+28,What is the level classification of Highway Medical Clinic Mukuyuni?
+28,Does this facility operate on weekends?
+28,Who owns Highway Medical Clinic Mukuyuni?
+28,Is the clinic open on public holidays?
+28,Are there any beds or cots available at this facility?
+29,What type of services does ScanHealth Limited-Kericho provide as a Level 2 healthcare facility?
+29,Is ScanHealth Limited-Kericho open on weekends or public holidays for radiology services?
+29,Who regulates ScanHealth Limited-Kericho and ensures compliance with radiation safety standards?
+29,Are there any inpatient facilities such as beds or cots available at ScanHealth Limited-Kericho?
+29,In which ward and constituency is ScanHealth Limited-Kericho located within Kericho County?
+30,What is the name of this healthcare facility?
+30,Does this dispensary operate during public holidays?
+30,Who owns and regulates Aimo Dispensary?
+30,How many beds and cots are available at this facility?
+30,Is Aimo Dispensary located in Homa Bay County?
+32,What is the level and type of care provided at Selina's Health Care?
+32,Does Selina's Health Care operate on weekends and public holidays?
+32,How many beds and cots are available in the facility?
+32,Who owns Selina's Health Care and which body regulates it?
+32,Is Selina's Health Care located in KARIOBANGI NORTH ward within NAIROBI county?
+33,What type of healthcare services does Naagis Dispensary provide?
+33,Is Naagis Dispensary open on weekends or public holidays?
+33,Who oversees Naagis Dispensary's operations and regulations?
+33,Does Naagis Dispensary have any inpatient facilities like beds or cots?
+33,What is the operational status of Naagis Dispensary in Turkana County?
+35,What is the operational status of Karen Roses Medical Clinic?
+35,Does Karen Roses Medical Clinic operate on weekends?
+35,Who owns Karen Roses Medical Clinic?
+35,How many beds and cots are available at Karen Roses Medical Clinic?
+35,Is Karen Roses Medical Clinic approved and visible to the public?
+36,What is the official name of this healthcare facility?
+36,How many beds are available in this hospital?
+36,Is the hospital open on public holidays?
+36,Who owns this healthcare facility?
+36,Which regulatory body oversees this hospital?
+38,What level of healthcare services does Nasianda provide?
+38,Is Nasianda a government-owned healthcare facility?
+38,Does Nasianda operate on weekends or public holidays?
+38,How many beds and cots are available at Nasianda?
+38,Is Nasianda currently operational and visible to the public?
+43,What is the name of the healthcare facility?
+43,Is the facility operational and approved by authorities?
+43,Does the facility have any beds or cots available?
+43,Is the facility open on weekends or public holidays?
+43,Who owns and regulates the healthcare facility?
+44,What type of services does South C Dialysis Centre provide?
+44,Is South C Dialysis Centre open on public holidays?
+44,How many beds are available at South C Dialysis Centre?
+44,Is this healthcare facility privately owned?
+44,Does South C Dialysis Centre operate late at night?
+49,What is the maximum number of beds available for patients at Chepsoo Medical Centre?
+49,Is Chepsoo Medical Centre open during public holidays for patient care?
+49,Who owns and manages Chepsoo Medical Centre?
+49,Can I visit Chepsoo Medical Centre late at night for an emergency?
+49,What level of healthcare service does Chepsoo Medical Centre provide?
+54,What services are available at Rushi Medical Clinic?
+54,Is Rushi Medical Clinic open on public holidays?
+54,Who manages Rushi Medical Clinic?
+54,Does the clinic operate late into the night?
+54,How many beds and cots are available at this clinic?
+59,What is the name of this healthcare facility?
+59,How many beds are available at Bliss M Clinic?
+59,Is Bliss M Clinic open during public holidays?
+59,Which regulatory body oversees this clinic?
+59,What type of healthcare services does Bliss M Clinic offer?
+60,What level of healthcare services does Jimba Dispensary provide?
+60,Is Jimba Dispensary open during public holidays?
+60,Who owns and regulates Jimba Dispensary?
+60,Does Jimba Dispensary admit patients overnight with beds or cots?
+60,Is Jimba Dispensary operational and visible to the public?
+62,What type of services does Hope Care Medical Centre offer?
+62,Is Hope Care Medical Centre open during public holidays?
+62,Who owns Hope Care Medical Centre?
+62,Does Hope Care Medical Centre have inpatient facilities with beds or cots?
+62,In which ward is Hope Care Medical Centre located?
+63,What type of services does MASAKA DISPENSARY provide since it is outpatient only?
+63,Is MASAKA DISPENSARY open on weekends or public holidays?
+63,Who manages MASAKA DISPENSARY and oversees its operations?
+63,Does MASAKA DISPENSARY have any beds or cots for patients?
+63,Is MASAKA DISPENSARY currently operational and approved by the Ministry of Health?
+64,What type of healthcare services does EREGI TTC Clinic provide?
+64,Is EREGI TTC Clinic open during weekends?
+64,Who owns EREGI TTC Clinic in Kakamega County?
+64,Does EREGI TTC Clinic have any beds for patient admission?
+64,Is EREGI TTC Clinic officially approved by the Ministry of Health?
+65,What is the name and level of the healthcare facility?
+65,"Does Lukanji Health Clinic operate on weekends, late nights, or public holidays?"
+65,"Which organization owns Lukanji Health Clinic, and who regulates it?"
+65,How many beds and cots are available at the clinic?
+65,"Is the clinic located in Kakamega County, and what ward is it in?"
+67,What are the operating hours of Eastern Afya Medical Centre on weekends?
+67,Is Eastern Afya Medical Centre open on public holidays?
+67,"Who owns Eastern Afya Medical Centre, and under what practice?"
+67,What level of healthcare service does Eastern Afya Medical Centre provide?
+67,Is Eastern Afya Medical Centre approved and operational for public use?
+68,What is the ownership type of Ruai Family Hospital - Tala?
+68,How many beds and cots are available at this facility?
+68,Is Ruai Family Hospital - Tala open on weekends and public holidays?
+68,What is the level and type of healthcare provided here?
+68,Which ward and county is the facility located in?
+74,What is the operation status of Togonye Dispensary?
+74,Does Togonye Dispensary open on weekends?
+74,Who owns Togonye Dispensary?
+74,Are there any beds or cots available at Togonye Dispensary?
+74,Which ward is Togonye Dispensary located in?
+80,What type of services does Palis Medical Clinic provide as a basic primary health care facility?
+80,Is Palis Medical Clinic open on weekends for patient visits?
+80,"Who owns Palis Medical Clinic, and under what regulatory body does it operate?"
+80,Can I visit Palis Medical Clinic during public holidays for medical services?
+80,Does Palis Medical Clinic operate 24 hours a day or stay open late at night?
+83,What is the name of this healthcare facility?
+83,How many beds and cots are available in this facility?
+83,Does the facility remain operational on public holidays?
+83,Who owns St. Akidiva Memorial healthcare facility?
+83,Which county and sub-county is the facility located in?
+84,What is the regulatory body overseeing Faith CFW Clinic?
+84,Is Faith CFW Clinic open on weekends?
+84,Does Faith CFW Clinic have any inpatient facilities like beds or cots?
+84,Which county and constituency is Faith CFW Clinic located in?
+84,"Who owns Faith CFW Clinic, and is it approved for public visibility?"
+85,What type of services does Patience CFW Clinic provide?
+85,Is Patience CFW Clinic open on weekends or public holidays?
+85,Who owns and regulates Patience CFW Clinic?
+85,Does Patience CFW Clinic have any beds or cots for inpatient care?
+85,What is the operational status of Patience CFW Clinic in Embu county?
+86,What type of facility is Tumaini CFW Clinic?
+86,Does Tumaini CFW Clinic operate on weekends?
+86,How many beds and cots are available at Tumaini CFW Clinic?
+86,Who owns Tumaini CFW Clinic?
+86,Is Tumaini CFW Clinic accessible to the public?
+87,What is the official name of this healthcare facility?
+87,Does the facility operate on weekends and public holidays?
+87,How many beds and cots are available in the facility?
+87,Who regulates this healthcare facility and who owns it?
+87,Is Africare Limited Eastleigh open late at night?
+88,What type of services does Mtwapa Drop In and Resource Centre provide?
+88,Is Mtwapa Drop In and Resource Centre operational on weekends?
+88,Who owns the Mtwapa Drop In and Resource Centre facility?
+88,Does Mtwapa Drop In and Resource Centre have any beds or cots?
+88,Under which regulatory body does Mtwapa Drop In and Resource Centre operate?
+91,What are the operating hours of Unicure Medical Centre?
+91,Does Unicure Medical Centre have inpatient facilities like beds or cots?
+91,Is Unicure Medical Centre open on weekends or public holidays?
+91,Who operates and regulates Unicure Medical Centre?
+91,What is the location of Unicure Medical Centre within Kirinyaga County?
+92,What is the name of the healthcare facility located in Kerugoya?
+92,Is the Endoscopy and Diagnostic Center Kerugoya open on weekends?
+92,Who owns the Endoscopy and Diagnostic Center Kerugoya?
+92,What is the regulatory body for the Endoscopy and Diagnostic Center Kerugoya?
+92,Does the Endoscopy and Diagnostic Center Kerugoya have any beds or cots?
+93,What is the operational status of Professor Wasuna Clinic?
+93,Is Professor Wasuna Clinic open on weekends or public holidays?
+93,How many beds and cots are available at Professor Wasuna Clinic?
+93,Who oversees the regulation of Professor Wasuna Clinic?
+93,What is the facility type and level of Professor Wasuna Clinic?
+95,What is the name of this healthcare facility?
+95,Who owns Machesa Dispensary?
+95,Does the facility operate on weekends?
+95,Which county is Machesa Dispensary located in?
+95,What is the level classification of this healthcare facility?
+96,What is the full name of the facility and its operational status?
+96,Who owns this healthcare facility and oversees its regulation?
+96,Does Kapkitony operate on weekends or public holidays?
+96,How many beds and cots are available at this facility?
+96,In which county and ward is the facility located?
+101,What is the name and level of Sirende Medical Clinic?
+101,Does Sirende Medical Clinic operate on weekends or public holidays?
+101,Who owns and regulates Sirende Medical Clinic?
+101,What is the operation status and visibility of Sirende Medical Clinic?
+101,Are there any beds or cots available at Sirende Medical Clinic?
+103,What is the name and location of this healthcare facility?
+103,Does this facility operate on weekends or public holidays?
+103,How many beds and cots are available at this facility?
+103,Is this facility managed by a private or public organization?
+103,What is the regulatory body overseeing this healthcare facility?
